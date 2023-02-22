@@ -1,0 +1,25 @@
+<odoo>
+    <record id="view_tree_todo" model="ir.ui.view">
+        <field name="name">view.tree.todo</field>
+        <field name="model">create.persona</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="persona"/>
+                <field name="apellido"/>
+                <field name="direccion"/>
+                <field name="telefono"/>
+                <field name="date" height="130"/> 
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_view_todo" model="ir.actions.act_window">
+        <field name="name">Crear Persona</field>
+        <field name="res_model">create.persona</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_todo" parent="" action="modulo_insertarpracticaa.action_view_todo"/>
+
+</odoo>
